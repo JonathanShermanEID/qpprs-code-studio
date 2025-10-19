@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
       '/api/translate': 'Code translation (POST)',
       '/api/health': 'Health check'
     },
-    documentation: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://qpprs-code-studio.vercel.app',
+    documentation: 'https://qpprs-code-studio.vercel.app',
     copyright: '© 2025 Jonathan Sherman. All Rights Reserved.'
   };
 

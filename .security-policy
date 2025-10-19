@@ -1,0 +1,63 @@
+# Q++RS Code Studio - Permanent Security Policy
+# © 2025 Jonathan Sherman. All Rights Reserved.
+
+# BLOCKED FOREVER - NO EXCEPTIONS
+
+## Blocked Code Patterns
+- process.env (environment variables)
+- eval() (code evaluation)
+- exec() (command execution)
+- child_process (process spawning)
+- shell commands (.sh, .ps1, .bat, .cmd)
+- require('fs') (file system access)
+- require('net') (network access)
+- require('http') (HTTP server)
+- __dirname (directory access)
+- __filename (file path access)
+
+## Blocked File Types
+- .sh (shell scripts)
+- .ps1 (PowerShell scripts)
+- .bat (batch files)
+- .cmd (command files)
+- .exe (executables)
+- .dll (dynamic libraries)
+
+## Blocked Operations
+- Code injection
+- SQL injection
+- XSS attacks
+- CSRF attacks
+- Command injection
+- Path traversal
+- File inclusion
+- Remote code execution
+
+## Security Rules
+1. NO external command execution
+2. NO environment variable access
+3. NO file system operations
+4. NO network operations beyond HTTP responses
+5. NO dynamic code evaluation
+6. NO shell script execution
+7. NO PowerShell commands
+8. NO process spawning
+9. NO external library loading
+10. ALL code must be static and reviewed
+
+## Enforcement
+- Automatic scanning on deployment
+- Immediate rejection of blocked patterns
+- Manual review of all code changes
+- Zero tolerance policy
+
+## Author Protection
+- Jonathan Sherman authorship: PROTECTED
+- Q++RS Code Studio name: PROTECTED
+- Copyright notices: PROTECTED
+- NO modifications without authorization
+
+---
+This policy is PERMANENT and applies to ALL future installations.
+Any violation will result in immediate deployment failure.
+

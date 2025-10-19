@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   const response = {
     status: 'healthy',
     platform: 'Vercel',
-    environment: process.env.VERCEL_ENV || 'production',
+    environment: 'production',
     timestamp: new Date().toISOString(),
     uptime: '99.9%',
     version: '1.0.0',

@@ -40,14 +40,13 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"
         }
       ]
     }
-  ],
-  "env": {
-    "ENVIRONMENT": "production",
-    "VERSION": "1.0.0",
-    "AUTHOR": "Jonathan Sherman"
-  }
+  ]
 }
 

@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
     version: '1.0.0',
     status: 'operational',
     platform: 'Vercel',
-    environment: process.env.VERCEL_ENV || 'production',
+    environment: 'production',
     uptime: '99.9%',
     requests_processed: Math.floor(Math.random() * 1000000),
     timestamp: new Date().toISOString()
