@@ -1,0 +1,22 @@
+{
+  "name": "qpprs-code-studio",
+  "version": "1.0.0",
+  "description": "Q++RS Code Studio - AI-Powered Code Translation Platform",
+  "author": "Jonathan Sherman",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "code-translation",
+    "ai",
+    "neural-network",
+    "programming-languages",
+    "ios",
+    "vercel"
+  ]
+}
+
