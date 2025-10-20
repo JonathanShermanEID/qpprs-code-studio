@@ -4,24 +4,14 @@
   "copyright": "© 2025 Jonathan Sherman. All Rights Reserved.",
   "creator": "Jonathan Sherman",
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
     {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ],
   "headers": [
@@ -55,6 +45,10 @@
         {
           "key": "X-Copyright",
           "value": "© 2025 Jonathan Sherman. All Rights Reserved."
+        },
+        {
+          "key": "X-Version",
+          "value": "4.0.0"
         }
       ]
     }
