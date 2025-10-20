@@ -1,5 +1,8 @@
 {
   "name": "qpprs-code-studio",
+  "author": "Jonathan Sherman",
+  "copyright": "© 2025 Jonathan Sherman. All Rights Reserved.",
+  "creator": "Jonathan Sherman",
   "version": 2,
   "builds": [
     {
@@ -44,6 +47,14 @@
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"
+        },
+        {
+          "key": "X-Author",
+          "value": "Jonathan Sherman"
+        },
+        {
+          "key": "X-Copyright",
+          "value": "© 2025 Jonathan Sherman. All Rights Reserved."
         }
       ]
     }

@@ -2,7 +2,10 @@
 
 **AI-Powered Code Translation Platform**
 
-Author: Jonathan Sherman  
+**Author:** Jonathan Sherman  
+**Creator:** Jonathan Sherman  
+**Copyright:** © 2025 Jonathan Sherman. All Rights Reserved.  
+**Created by:** Jonathan Sherman  
 Platform: Vercel  
 Design: iOS 18.6 Schema  
 Version: 1.0.0

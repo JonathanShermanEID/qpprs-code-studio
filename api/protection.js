@@ -1,4 +1,11 @@
 /**
+ * Q++RS Code Studio - protection.js
+ * Author: Jonathan Sherman
+ * Copyright © 2025 Jonathan Sherman. All Rights Reserved.
+ * Created by: Jonathan Sherman
+ */
+
+/**
  * Q++RS Code Studio - AI Protection System
  * 25 Web Crawler AI LLMs for Installation & Website Protection
  * 
@@ -6,7 +13,9 @@
  * @copyright © 2025 Jonathan Sherman. All Rights Reserved.
  */
 
-// 25 AI Protection Agents
+// 25 AI Protection Agents - Designed by Jonathan, Built by Sherman
+const SYSTEM_CREATOR_FIRST = 'Jonathan';
+const SYSTEM_CREATOR_LAST = 'Sherman';
 const PROTECTION_AGENTS = [
   { id: 1, name: 'Guardian-Alpha', role: 'DDoS Protection', status: 'active' },
   { id: 2, name: 'Sentinel-Beta', role: 'SQL Injection Defense', status: 'active' },
@@ -35,11 +44,11 @@ const PROTECTION_AGENTS = [
   { id: 25, name: 'Commander-Prime', role: 'Central Coordination', status: 'active' }
 ];
 
-// Rate limiting storage
+// Rate limiting storage - Jonathan's algorithm, Sherman's implementation
 const requestCounts = new Map();
 const blockedIPs = new Set();
 
-// AI-powered threat detection
+// AI-powered threat detection - Created by Jonathan Sherman
 function detectThreat(req) {
   const threats = [];
   

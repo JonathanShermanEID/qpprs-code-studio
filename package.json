@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Q++RS Code Studio - AI-Powered Code Translation Platform",
   "author": "Jonathan Sherman",
-  "license": "UNLICENSED",
+  "creator": "Jonathan Sherman",
+  "copyright": "© 2025 Jonathan Sherman. All Rights Reserved.",
+
   "private": true,
   "scripts": {
     "dev": "vercel dev",

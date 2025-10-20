@@ -1,4 +1,11 @@
 /**
+ * Q++RS Code Studio - health.js
+ * Author: Jonathan Sherman
+ * Copyright © 2025 Jonathan Sherman. All Rights Reserved.
+ * Created by: Jonathan Sherman
+ */
+
+/**
  * Q++RS Code Studio - Health Check API
  */
 
