@@ -1,0 +1,142 @@
+/**
+ * Code Visualizer AI Styles
+ * © 2025 Jonathan Sherman
+ */
+
+.code-visualizer-ai {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--space-md);
+}
+
+.visualizer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+/* Dropdown */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 160px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + var(--space-sm));
+  left: 0;
+  min-width: 200px;
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  z-index: var(--z-dropdown);
+  animation: fadeIn 0.2s ease-out;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  color: var(--blue-200);
+  font-family: var(--font-system);
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 168, 255, 0.1);
+  color: var(--blue-50);
+}
+
+.dropdown-item.active {
+  background: rgba(0, 168, 255, 0.2);
+  color: var(--color-primary);
+}
+
+.item-name {
+  flex: 1;
+  text-align: left;
+}
+
+.item-ext,
+.item-icon {
+  color: var(--blue-700);
+  font-size: 0.85rem;
+}
+
+/* Code Editor */
+.code-editor {
+  flex: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.code-input {
+  width: 100%;
+  height: 100%;
+  padding: var(--space-lg);
+  background: transparent;
+  border: none;
+  color: var(--blue-100);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+}
+
+.code-input::placeholder {
+  color: var(--blue-800);
+}
+
+/* Output Panel */
+.output-panel {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.output-header {
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(0, 168, 255, 0.1);
+  border-bottom: 1px solid var(--glass-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.output-content {
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--blue-200);
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* © 2025 Jonathan Sherman. All Rights Reserved. */
+

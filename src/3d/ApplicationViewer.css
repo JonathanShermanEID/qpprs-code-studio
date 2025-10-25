@@ -1,0 +1,74 @@
+/**
+ * 3D Application Viewer Styles
+ * © 2025 Jonathan Sherman
+ */
+
+.application-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-left: 1px solid var(--glass-border);
+}
+
+.viewer-header {
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.viewer-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--blue-50);
+  margin: 0;
+}
+
+.viewer-stats {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--blue-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.viewer-canvas {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.viewer-controls {
+  padding: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+}
+
+.viewer-controls .btn {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+/* © 2025 Jonathan Sherman. All Rights Reserved. */
+

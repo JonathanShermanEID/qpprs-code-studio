@@ -1,0 +1,86 @@
+/**
+ * HoloGlyph Icon Styles - Apple iOS 26 + Microsoft Blend
+ * © 2025 Jonathan Sherman
+ */
+
+.holo-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+  filter: drop-shadow(0 0 4px rgba(0, 168, 255, 0.3));
+}
+
+.holo-shape {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  transition: all var(--transition-base);
+}
+
+.holo-path {
+  fill: none;
+  stroke: currentColor;
+  transition: all var(--transition-base);
+}
+
+/* Hover effects */
+.holo-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(0, 168, 255, 0.6));
+}
+
+.holo-icon:hover .holo-shape {
+  fill: var(--color-glow);
+  stroke: var(--color-glow);
+}
+
+.holo-icon:hover .holo-path {
+  stroke: var(--color-glow);
+}
+
+/* Holographic animation */
+@keyframes holo-shimmer {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(0, 168, 255, 0.3)) hue-rotate(0deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)) hue-rotate(10deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(0, 168, 255, 0.3)) hue-rotate(0deg);
+  }
+}
+
+.holo-icon.animate {
+  animation: holo-shimmer 2s ease-in-out infinite;
+}
+
+/* Active state */
+.holo-icon.active {
+  color: var(--color-primary);
+  filter: drop-shadow(0 0 12px rgba(0, 168, 255, 0.8));
+}
+
+/* Sizes */
+.holo-icon.sm {
+  width: 16px;
+  height: 16px;
+}
+
+.holo-icon.md {
+  width: 24px;
+  height: 24px;
+}
+
+.holo-icon.lg {
+  width: 32px;
+  height: 32px;
+}
+
+.holo-icon.xl {
+  width: 48px;
+  height: 48px;
+}
+
+/* © 2025 Jonathan Sherman. All Rights Reserved. */
+

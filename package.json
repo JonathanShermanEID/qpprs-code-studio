@@ -1,0 +1,27 @@
+{
+  "name": "qpprs-ios26-monaco",
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.9.4",
+    "@monaco-editor/react": "^4.7.0",
+    "three": "^0.170.0",
+    "@react-three/fiber": "^9.4.0",
+    "@react-three/drei": "^9.122.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.170.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}

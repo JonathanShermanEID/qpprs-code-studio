@@ -1,0 +1,420 @@
+/**
+ * Q++RS Code Studio v3.0.0 - iOS 26 Monaco Edition
+ * Global Styles - Liquid Glass Display System
+ * Author: Jonathan Sherman
+ * Copyright © 2025 All Rights Reserved
+ */
+
+/* ========================================
+   iOS 26 Monaco Design System
+   ======================================== */
+
+:root {
+  /* Black Background */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  
+  /* Blue Monochromatic Palette */
+  --blue-50: #e6f2ff;
+  --blue-100: #b3d9ff;
+  --blue-200: #80c0ff;
+  --blue-300: #4da6ff;
+  --blue-400: #1a8cff;
+  --blue-500: #0073e6;
+  --blue-600: #005bb3;
+  --blue-700: #004280;
+  --blue-800: #002a4d;
+  --blue-900: #00111a;
+  
+  /* Primary Colors */
+  --color-primary: #00a8ff;
+  --color-secondary: #0088cc;
+  --color-accent: #00d4ff;
+  --color-glow: #00e5ff;
+  
+  /* Liquid Glass Effects */
+  --glass-bg: rgba(0, 168, 255, 0.05);
+  --glass-border: rgba(0, 168, 255, 0.2);
+  --glass-glow: rgba(0, 168, 255, 0.4);
+  --glass-highlight: rgba(0, 212, 255, 0.1);
+  
+  /* Depth & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 168, 255, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 168, 255, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 168, 255, 0.2);
+  --shadow-xl: 0 16px 64px rgba(0, 168, 255, 0.25);
+  
+  /* Typography */
+  --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-Index */
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal: 1300;
+  --z-popover: 1400;
+  --z-tooltip: 1500;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-system);
+  background: var(--bg-primary);
+  color: var(--blue-100);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   Liquid Glass Components
+   ======================================== */
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-strong {
+  background: rgba(0, 168, 255, 0.08);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(0, 168, 255, 0.3);
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-subtle {
+  background: rgba(0, 168, 255, 0.02);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(0, 168, 255, 0.1);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   HoloGlyph Effects (Apple + Microsoft)
+   ======================================== */
+
+.holo-glyph {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holo-glyph::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent),
+    var(--color-glow)
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.holo-glyph:hover::before {
+  opacity: 0.6;
+  animation: holo-pulse 2s ease-in-out infinite;
+}
+
+@keyframes holo-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(12px);
+  }
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--blue-50);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+p {
+  color: var(--blue-200);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: rgba(0, 168, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--color-accent);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-family: var(--font-system);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  color: var(--blue-100);
+}
+
+.btn-glass:hover {
+  background: rgba(0, 168, 255, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
+}
+
+/* ========================================
+   Inputs
+   ======================================== */
+
+.input {
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--blue-100);
+  font-family: var(--font-system);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(20px);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+  background: rgba(0, 168, 255, 0.05);
+}
+
+.input::placeholder {
+  color: var(--blue-700);
+}
+
+/* ========================================
+   Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 168, 255, 0.6);
+  }
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+.text-glow {
+  text-shadow: 0 0 20px var(--glass-glow);
+}
+
+.border-glow {
+  box-shadow: 0 0 20px var(--glass-glow);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 16px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   iPhone XR Optimization (414×896px)
+   ======================================== */
+
+@media (max-width: 414px) {
+  html {
+    font-size: 14px;
+  }
+  
+  :root {
+    --space-md: 12px;
+    --space-lg: 16px;
+  }
+}
+
+/* ========================================
+   Copyright Notice
+   ======================================== */
+
+/* © 2025 Jonathan Sherman. All Rights Reserved. */
+
